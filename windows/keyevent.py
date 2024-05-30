@@ -1,5 +1,5 @@
 import subprocess
-import requests
+from windows.label_view import label_view
 from typing import List
 from datetime import datetime
 import tkinter as tk
@@ -167,9 +167,7 @@ def on_screencap():
 
 
 def on_install_apk(root: Wm):
-    root.geometry("800x600")
-    label = tk.Label(root, width=400, height=600, bg="white", text="这是一个白色的Label", anchor="center")
-    label.place(x=400, y=0)
+    label_view(root)
 
 
 def on_parent_move(sub_window, root, initial_geometry):
